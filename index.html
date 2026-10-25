@@ -56,7 +56,7 @@
         Il tuo inizio con MiniMed™ 780G
       </h1>
       <p class="mt-2 text-slate-200 text-xs leading-relaxed">
-        Guide essenziali per il <strong class="text-white">sensore Instinct™</strong>, il <strong class="text-white">set Extended™ (cambio ogni 6-7 gg)</strong> e i consigli per la vita di tutti i giorni.
+        Guide essenziali per il <strong class="text-white">sensore Instinct™</strong>, il <strong class="text-white">set Extended™ (cambio ogni 6-7 gg)</strong> e le <strong class="text-white">app consigliate</strong>.
       </p>
       
       <!-- Micro-Help Banner -->
@@ -147,43 +147,111 @@
         </div>
       </section>
 
-      <!-- TAB 2: SENSORE INSTINCT -->
+      <!-- TAB 2: SENSORE INSTINCT (CAROSELLO INTERATTIVO A SCHEDE!) -->
       <section id="content-step2" class="step-panel hidden space-y-4">
         <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-extrabold uppercase tracking-wider text-cyan-700 bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-200">
               Tappa 2 di 4 • Sensore Instinct™
             </span>
-            <span class="text-[11px] text-slate-400">Video: 2 min</span>
+            <span class="text-[11px] text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-md">Guida a Passaggi</span>
           </div>
-          <h2 class="text-base font-extrabold text-slate-900">Applicazione del Sensore Instinct™</h2>
+          <h2 class="text-base font-extrabold text-slate-900">Inserimento Sensore & Collegamento al 780G</h2>
           <p class="text-xs text-slate-500">
-            Un solo gesto, senza puntura manuale e senza calibrazioni con il pungidito.
+            Scorri le slide del carosello per vedere i 4 passaggi chiave:
           </p>
 
-          <!-- Mock Video Player -->
-          <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 relative group aspect-video flex flex-col items-center justify-center text-center p-4 text-white shadow-inner">
-            <div class="w-14 h-14 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center font-bold text-xl shadow-lg transform group-hover:scale-105 transition cursor-pointer">
-              ▶
+          <!-- CAROSELLO SLIDES CONTAINER -->
+          <div class="relative bg-gradient-to-b from-slate-900 to-indigo-950 rounded-2xl p-4 text-white shadow-md overflow-hidden min-h-[220px] flex flex-col justify-between">
+            
+            <!-- Slide 1 -->
+            <div id="instinct-slide-1" class="instinct-slide space-y-2">
+              <div class="flex items-center justify-between text-xs text-cyan-300 font-bold">
+                <span>Passo 1 di 4</span>
+                <span class="bg-white/10 px-2 py-0.5 rounded-full text-[10px]">📍 Posizionamento</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-white">Preparazione del Sito sul Braccio</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Applica il sensore sulla parte posteriore del braccio. Pulisci con una salvietta imbevuta di alcool e lascia asciugare completamente la pelle all'aria.
+              </p>
+              <div class="p-2.5 rounded-xl bg-white/10 border border-white/10 text-[11px] text-cyan-200">
+                💡 <em>Consiglio: evita nei, cicatrici o zone dove la cintura o la manica possono sfregare.</em>
+              </div>
             </div>
-            <p class="mt-2.5 font-bold text-xs text-white">Guida Applicazione Sensore Instinct™</p>
-            <p class="text-[10px] text-cyan-200">Posizionamento sul retro del braccio</p>
+
+            <!-- Slide 2 -->
+            <div id="instinct-slide-2" class="instinct-slide hidden space-y-2">
+              <div class="flex items-center justify-between text-xs text-cyan-300 font-bold">
+                <span>Passo 2 di 4</span>
+                <span class="bg-white/10 px-2 py-0.5 rounded-full text-[10px]">⚡ Applicazione</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-white">Un Solo Gesto con l'Applicatore</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Rimuovi il sigillo di protezione. Posiziona l'applicatore a 90° perpendicolare al braccio e premi con decisione: il sensore aderisce e l'ago si ritrae istantaneamente da solo.
+              </p>
+              <div class="p-2.5 rounded-xl bg-white/10 border border-white/10 text-[11px] text-cyan-200">
+                ✨ <em>Nessuna puntura manuale: il gesto è automatizzato e praticamente indolore.</em>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div id="instinct-slide-3" class="instinct-slide hidden space-y-2">
+              <div class="flex items-center justify-between text-xs text-cyan-300 font-bold">
+                <span>Passo 3 di 4</span>
+                <span class="bg-white/10 px-2 py-0.5 rounded-full text-[10px]">🩹 Adesione</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-white">Adesione Perfetta e Sigillo</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Rimuovi l'applicatore monouso e massaggia con le dita il bordo dell'adesivo trasparente per 10 secondi per assicurare una tenuta perfetta anche sotto la doccia o in piscina.
+              </p>
+              <div class="p-2.5 rounded-xl bg-white/10 border border-white/10 text-[11px] text-cyan-200">
+                🏊 <em>Resistente all'acqua: non serve staccarlo né per la doccia né per nuotare.</em>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div id="instinct-slide-4" class="instinct-slide hidden space-y-2">
+              <div class="flex items-center justify-between text-xs text-cyan-300 font-bold">
+                <span>Passo 4 di 4</span>
+                <span class="bg-white/10 px-2 py-0.5 rounded-full text-[10px]">📡 Connessione</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-white">Collegamento Automatico al 780G</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Il tuo microinfusore rileva automaticamente il nuovo sensore Instinct™. Conferma a display e parte il breve conto alla rovescia di riscaldamento: <strong>zero calibrazioni da dito</strong>!
+              </p>
+              <div class="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-400/30 text-[11px] text-emerald-300">
+                ✅ <em>Pronto: le letture glicemiche appariranno direttamente sul 780G e sul telefono.</em>
+              </div>
+            </div>
+
+            <!-- Controlli Carosello & Pallini -->
+            <div class="pt-3 border-t border-white/10 flex items-center justify-between mt-2">
+              <button onclick="prevSlide()" class="text-xs font-bold text-slate-300 hover:text-white px-2 py-1 rounded-lg bg-white/10 transition">
+                ← Precedente
+              </button>
+              <div class="flex space-x-1.5" id="slideDots">
+                <span class="dot w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span class="dot w-2 h-2 rounded-full bg-white/30"></span>
+                <span class="dot w-2 h-2 rounded-full bg-white/30"></span>
+                <span class="dot w-2 h-2 rounded-full bg-white/30"></span>
+              </div>
+              <button onclick="nextSlide()" class="text-xs font-bold text-cyan-300 hover:text-cyan-200 px-2.5 py-1 rounded-lg bg-cyan-500/20 border border-cyan-400/30 transition">
+                Successivo →
+              </button>
+            </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-2 text-center text-[11px] pt-1">
-            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
-              <span class="font-bold text-slate-800 block mb-0.5">1. Braccio</span>
-              <span class="text-slate-500 text-[10px]">Pelle pulita e asciutta</span>
+          <!-- Link Diretto Presentazione Completa Highspot -->
+          <a href="https://view-su1.highspot.com/viewer/1a5c39f6d89429d0535a3a0437d437ca" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-cyan-50 hover:bg-cyan-100/80 border border-cyan-200 text-cyan-950 transition">
+            <div class="flex items-center space-x-2.5">
+              <span class="text-lg">📊</span>
+              <div>
+                <p class="font-extrabold text-xs">Apri la Presentazione Completa Instinct™</p>
+                <p class="text-[10px] text-cyan-800">Visualizza tutte le slide ufficiali su Highspot Viewer</p>
+              </div>
             </div>
-            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
-              <span class="font-bold text-slate-800 block mb-0.5">2. Gesto</span>
-              <span class="text-slate-500 text-[10px]">Premi l'applicatore</span>
-            </div>
-            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
-              <span class="font-bold text-slate-800 block mb-0.5">3. Pronto</span>
-              <span class="text-slate-500 text-[10px]">Zero calibrazioni</span>
-            </div>
-          </div>
+            <span class="text-xs font-bold text-cyan-700 bg-white px-2.5 py-1 rounded-lg shadow-2xs">Apri ↗</span>
+          </a>
 
           <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
             <button onclick="switchTab('step1')" class="text-xs font-semibold text-slate-500">
@@ -196,7 +264,7 @@
         </div>
       </section>
 
-      <!-- TAB 3: SET EXTENDED (6/7 GIORNI) -->
+      <!-- TAB 3: SET EXTENDED (COLLEGATO AL VIDEO HIGHSPOT!) -->
       <section id="content-step3" class="step-panel hidden space-y-4">
         <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
           <div class="flex items-center justify-between">
@@ -212,17 +280,22 @@
             Grazie alla tecnologia Extended™, cambi la cannula e il serbatoio solo una volta a settimana.
           </p>
 
-          <!-- Mock Video Player Extended -->
-          <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 relative group aspect-video flex flex-col items-center justify-center text-center p-4 text-white shadow-inner">
-            <div class="w-14 h-14 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-xl shadow-lg transform group-hover:scale-105 transition cursor-pointer">
-              ▶
+          <!-- Video Player Card collegato al Link Highspot Ufficiale -->
+          <a href="https://view-su1.highspot.com/viewer/8597b671b7bbfbb83a21b1ff510e16f5" target="_blank" class="block rounded-2xl overflow-hidden bg-gradient-to-br from-purple-950 via-slate-900 to-indigo-950 border border-purple-800/50 p-5 text-white shadow-md relative group hover:border-purple-400 transition">
+            <div class="flex flex-col items-center justify-center text-center py-3">
+              <div class="w-16 h-16 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-2xl shadow-xl transform group-hover:scale-110 transition">
+                ▶
+              </div>
+              <p class="mt-3 font-extrabold text-sm text-white">Guarda il Video Ufficiale: Set Extended™</p>
+              <p class="text-[11px] text-purple-200 mt-0.5">Spurgo aria, riempimento serbatoio e applicazione a 90°</p>
+              <div class="mt-3 inline-flex items-center space-x-1 bg-white/10 px-3 py-1 rounded-full text-[10px] font-semibold text-purple-200 border border-white/15">
+                <span>Guarda su Highspot Viewer</span> <span>↗</span>
+              </div>
             </div>
-            <p class="mt-2.5 font-bold text-xs text-white">Guida Cambio Serbatoio & Set Extended™</p>
-            <p class="text-[10px] text-purple-200">Eliminazione bolle d'aria e inserimento cannula</p>
-          </div>
+          </a>
 
           <!-- Highlight Box Regola 6-7 Giorni -->
-          <div class="p-3 rounded-xl bg-purple-50/80 border border-purple-200 text-xs text-purple-950 space-y-1">
+          <div class="p-3.5 rounded-xl bg-purple-50/80 border border-purple-200 text-xs text-purple-950 space-y-1">
             <p class="font-extrabold text-xs flex items-center text-purple-900">
               💡 La Regola dei 6-7 Giorni
             </p>
@@ -286,7 +359,7 @@
         </div>
       </section>
 
-      <!-- TAB 5: TIPS & TRICKS (NOVITÀ: DOCCIA, CAMBIO SET, VIAGGI, SPORT) -->
+      <!-- TAB 5: TIPS & TRICKS -->
       <section id="content-tips" class="step-panel hidden space-y-4">
         <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-4">
           <div>
@@ -347,13 +420,13 @@
               </div>
             </div>
             <div class="text-xs text-slate-600 space-y-1 pl-1 text-[11px] leading-relaxed">
-              <p>• <strong>Controlli Aeroporto</strong>: microinfusore e sensori <strong>NON devono passare nello scanner a raggi X</strong> (quello per le valigie) né nel body scanner total-body. Mostra il tesserino Medtronic e chiedi il controllo manuale (metal detector standard a portale o perquisizione a mano).</p>
-              <p>• <strong>Tutto nel Bagaglio a Mano</strong>: porta sempre scorte doppie di insulina, set Extended e sensori nel bagaglio a mano. <strong>Mai nella stiva</strong> (le temperature sotto zero dell'aereo congelano e distruggono l'insulina!).</p>
-              <p>• <strong>Materiale Guida Viaggi</strong>: puoi scaricare la lettera per l'aeroporto e la guida completa direttamente dall'app WeCare.</p>
+              <p>• <strong>Controlli Aeroporto</strong>: microinfusore e sensori <strong>NON devono passare nello scanner a raggi X</strong> (quello per le valigie) né nel body scanner total-body. Mostra il tesserino Medtronic e chiedi il controllo manuale.</p>
+              <p>• <strong>Tutto nel Bagaglio a Mano</strong>: porta sempre scorte doppie nel bagaglio a mano. <strong>Mai nella stiva</strong> (a -40°C l'insulina gela e si distrugge!).</p>
+              <p>• <strong>Certificato di Viaggio</strong>: puoi scaricare la lettera per l'aeroporto direttamente dall'app WeCare™.</p>
             </div>
           </div>
 
-          <!-- TIP 4: SPORT E ATTIVITÀ FISICA -->
+          <!-- TIP 4: SPORT -->
           <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-2">
             <div class="flex items-center space-x-2.5">
               <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg font-bold flex-shrink-0">
@@ -365,8 +438,7 @@
               </div>
             </div>
             <div class="text-xs text-slate-600 space-y-1 pl-1 text-[11px] leading-relaxed">
-              <p>• Attiva l'<strong>Obiettivo Temporaneo (Temp Target a 150 mg/dL)</strong> su SmartGuard circa <strong>1-2 ore prima</strong> di iniziare l'attività sportiva.</p>
-              <p>• Questo dice all'algoritmo di ridurre l'insulina in anticipo, consentendoti di allenarti in piena sicurezza senza cali glicemici improvvisi.</p>
+              <p>• Attiva l'<strong>Obiettivo Temporaneo (Temp Target a 150 mg/dL)</strong> su SmartGuard circa <strong>1-2 ore prima</strong> dell'allenamento per ridurre l'insulina in anticipo.</p>
             </div>
           </div>
 
@@ -381,25 +453,23 @@
         </div>
       </section>
 
-      <!-- TAB 6: LE TUE APP (MINIMED MOBILE, WECARE, CONTA SU DI ME) -->
+      <!-- TAB 6: LE TUE APP (CON ICONE UFFICIALI AD ALTA RISOLUZIONE!) -->
       <section id="content-apps" class="step-panel hidden space-y-4">
         <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-4">
           <div>
             <span class="text-[10px] font-extrabold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200">
               Ecosistema Digitale Medtronic
             </span>
-            <h2 class="text-base font-extrabold text-slate-900 mt-2">Le 3 App Consigliate sul tuo Telefono</h2>
+            <h2 class="text-base font-extrabold text-slate-900 mt-2">Le 3 App Ufficiali sul tuo Telefono</h2>
             <p class="text-xs text-slate-500 mt-0.5">
-              Scarica queste tre app per avere il controllo completo, ordinare i materiali e contare i carboidrati facilmente.
+              Tocca i pulsanti neri per scaricarle subito dal tuo store ufficiale:
             </p>
           </div>
 
           <!-- APP 1: MiniMed Mobile -->
           <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
             <div class="flex items-center space-x-3">
-              <div class="w-12 h-12 rounded-2xl bg-minimed-navy text-white flex items-center justify-center font-black text-xl shadow-sm flex-shrink-0">
-                M
-              </div>
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a4/73/54/a4735440-0796-a3cb-a493-1968a79685d2/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/512x512bb.jpg" alt="MiniMed Mobile Icon" class="w-13 h-13 w-12 h-12 rounded-2xl shadow-sm flex-shrink-0 object-cover border border-slate-200">
               <div class="flex-1 min-w-0">
                 <div class="flex items-center justify-between">
                   <h3 class="font-extrabold text-slate-900 text-sm truncate">MiniMed™ Mobile</h3>
@@ -411,7 +481,7 @@
               </div>
             </div>
             <div class="grid grid-cols-2 gap-2 pt-1">
-              <a href="https://apps.apple.com/it/app/minimed-mobile/id1453006286" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
+              <a href="https://apps.apple.com/it/app/minimed-mobile/id1464664725" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
                 <span></span> <span>App Store (iOS)</span>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.medtronic.diabetes.minimedmobile" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-slate-900 text-white text-[11px] font-bold hover:bg-slate-800 transition">
@@ -423,21 +493,19 @@
           <!-- APP 2: WeCare -->
           <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
             <div class="flex items-center space-x-3">
-              <div class="w-12 h-12 rounded-2xl bg-cyan-600 text-white flex items-center justify-center font-black text-xl shadow-sm flex-shrink-0">
-                W
-              </div>
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/02/bc/b7/02bcb789-057f-4411-4226-17f0cb24813d/AppIcon-0-0-1x_U007emarketing-0-11-0-0-0-85-220.png/512x512bb.jpg" alt="WeCare Icon" class="w-12 h-12 rounded-2xl shadow-sm flex-shrink-0 object-cover border border-slate-200">
               <div class="flex-1 min-w-0">
                 <div class="flex items-center justify-between">
-                  <h3 class="font-extrabold text-slate-900 text-sm truncate">WeCare™ Medtronic</h3>
-                  <span class="text-[10px] font-bold bg-cyan-100 text-cyan-800 px-2 py-0.5 rounded-full">Materiali & Supporto</span>
+                  <h3 class="font-extrabold text-slate-900 text-sm truncate">MiniMed WeCare™</h3>
+                  <span class="text-[10px] font-bold bg-cyan-100 text-cyan-800 px-2 py-0.5 rounded-full">Materiali & Assistenza</span>
                 </div>
                 <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">
-                  Gestisci il riordino dei tuoi sensori e set Extended, scarica la lettera per i viaggi aerei e contatta il team.
+                  Riordino veloce di sensori e set Extended, monitoraggio spedizioni e lettera per i viaggi aerei.
                 </p>
               </div>
             </div>
             <div class="grid grid-cols-2 gap-2 pt-1">
-              <a href="https://apps.apple.com/it/app/wecare-medtronic/id1534433777" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
+              <a href="https://apps.apple.com/it/app/minimed-wecare/id6444044232" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
                 <span></span> <span>App Store (iOS)</span>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.medtronic.wecare" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-slate-900 text-white text-[11px] font-bold hover:bg-slate-800 transition">
@@ -449,9 +517,7 @@
           <!-- APP 3: Conta su di Me -->
           <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
             <div class="flex items-center space-x-3">
-              <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl shadow-sm flex-shrink-0">
-                🍎
-              </div>
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/7a/f2/be7af236-e413-9af4-ed6e-fd7130e46acf/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg" alt="Conta su di me Icon" class="w-12 h-12 rounded-2xl shadow-sm flex-shrink-0 object-cover border border-slate-200">
               <div class="flex-1 min-w-0">
                 <div class="flex items-center justify-between">
                   <h3 class="font-extrabold text-slate-900 text-sm truncate">Conta su di Me</h3>
@@ -463,7 +529,7 @@
               </div>
             </div>
             <div class="grid grid-cols-2 gap-2 pt-1">
-              <a href="https://apps.apple.com/it/app/conta-su-di-me/id984461623" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
+              <a href="https://apps.apple.com/it/app/conta-su-di-me-medtronic/id1442049476" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
                 <span></span> <span>App Store (iOS)</span>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.medtronic.contasudime" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-slate-900 text-white text-[11px] font-bold hover:bg-slate-800 transition">
@@ -642,6 +708,42 @@
         activeTab.classList.remove('text-slate-600');
       }
       window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    // Carosello Instinct Logic
+    let currentSlide = 1;
+    const totalSlides = 4;
+
+    function showSlide(n) {
+      document.querySelectorAll('.instinct-slide').forEach(s => s.classList.add('hidden'));
+      const active = document.getElementById('instinct-slide-' + n);
+      if (active) active.classList.remove('hidden');
+
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, idx) => {
+        if (idx === n - 1) {
+          dot.className = "dot w-2.5 h-2.5 rounded-full bg-cyan-400";
+        } else {
+          dot.className = "dot w-2 h-2 rounded-full bg-white/30";
+        }
+      });
+      currentSlide = n;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        showSlide(currentSlide + 1);
+      } else {
+        showSlide(1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        showSlide(currentSlide - 1);
+      } else {
+        showSlide(totalSlides);
+      }
     }
 
     // Accordion Toggle
