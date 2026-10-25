@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniMed™ 780G - Guida Pratica Paziente</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .bg-minimed-navy { background-color: #140066; }
+    .text-minimed-navy { color: #140066; }
+    .border-minimed-navy { border-color: #140066; }
+    .bg-minimed-cyan { background-color: #00A3E0; }
+    .text-minimed-cyan { color: #00A3E0; }
+    .badge-soft-cyan { background-color: #E0F5FC; color: #0077A6; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen pb-12">
+
+  <!-- Mobile Container Wrapper -->
+  <div id="appContainer" class="max-w-md mx-auto bg-slate-50 min-h-screen sm:my-4 sm:rounded-3xl sm:shadow-2xl sm:border sm:border-slate-300 overflow-hidden transition-all duration-300">
+
+    <!-- Top Status / MiniMed Header -->
+    <header class="bg-white px-4 py-3 border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-8 h-8 rounded-xl bg-minimed-navy flex items-center justify-center text-white font-black text-sm shadow-sm">
+            M
+          </div>
+          <div>
+            <div class="flex items-center space-x-1.5">
+              <span class="font-extrabold text-minimed-navy tracking-tight text-base">MiniMed™</span>
+              <span class="text-[11px] font-bold px-1.5 py-0.2 rounded-md badge-soft-cyan">780G</span>
+            </div>
+            <p class="text-[11px] text-slate-400 font-medium">Guida Paziente • Extended & Instinct™</p>
+          </div>
+        </div>
+
+        <!-- Numero Verde Diretto -->
+        <a href="tel:800601122" class="bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 px-2.5 py-1.5 rounded-xl font-bold text-xs flex items-center shadow-xs transition">
+          <span class="text-sm mr-1">📞</span>
+          <span>800.601.122</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="bg-gradient-to-br from-[#140066] via-[#1A037A] to-[#2E0B9E] text-white px-5 pt-6 pb-8 shadow-md">
+      <div class="inline-flex items-center space-x-1.5 bg-white/10 px-2.5 py-1 rounded-full text-[11px] font-semibold text-cyan-300 mb-2.5 border border-white/10">
+        <span>✨ Tutto a portata di tocco</span>
+      </div>
+      <h1 class="text-xl font-extrabold tracking-tight leading-snug">
+        Il tuo inizio con MiniMed™ 780G
+      </h1>
+      <p class="mt-2 text-slate-200 text-xs leading-relaxed">
+        Guide essenziali per il <strong class="text-white">sensore Instinct™</strong>, il <strong class="text-white">set Extended™ (cambio ogni 6-7 gg)</strong> e i consigli per la vita di tutti i giorni.
+      </p>
+      
+      <!-- Micro-Help Banner -->
+      <div class="mt-4 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs text-slate-200">
+        <span class="flex items-center text-[11px]">
+          <span class="mr-1.5 text-sm">💡</span> Assistenza Tecnica Gratuita H24
+        </span>
+        <a href="tel:800601122" class="font-bold text-cyan-300 text-[11px] hover:underline">800.601.122</a>
+      </div>
+    </section>
+
+    <!-- Scrollable Tab Bar (Tutte le sezioni indipendenti!) -->
+    <nav class="bg-white border-b border-slate-200 px-3 py-2 -mt-3 mx-3 rounded-2xl shadow-sm overflow-x-auto no-scrollbar">
+      <div class="flex space-x-1.5 min-w-max text-xs font-bold">
+        <button onclick="switchTab('step1')" id="tab-step1" class="tab-btn py-2 px-3 rounded-xl transition flex items-center space-x-1 bg-indigo-50 text-minimed-navy border border-indigo-200/80">
+          <span>📦</span> <span>1. Avvio</span>
+        </button>
+        <button onclick="switchTab('step2')" id="tab-step2" class="tab-btn py-2 px-3 rounded-xl text-slate-600 hover:bg-slate-50 transition flex items-center space-x-1">
+          <span>⚡</span> <span>2. Instinct™</span>
+        </button>
+        <button onclick="switchTab('step3')" id="tab-step3" class="tab-btn py-2 px-3 rounded-xl text-slate-600 hover:bg-slate-50 transition flex items-center space-x-1">
+          <span>💧</span> <span>3. Extended</span>
+        </button>
+        <button onclick="switchTab('step4')" id="tab-step4" class="tab-btn py-2 px-3 rounded-xl text-slate-600 hover:bg-slate-50 transition flex items-center space-x-1">
+          <span>🛡️</span> <span>4. SmartGuard</span>
+        </button>
+        <button onclick="switchTab('tips')" id="tab-tips" class="tab-btn py-2 px-3 rounded-xl text-amber-700 bg-amber-50/70 border border-amber-200/60 hover:bg-amber-100 transition flex items-center space-x-1">
+          <span>💡</span> <span>Tips & Tricks</span>
+        </button>
+        <button onclick="switchTab('apps')" id="tab-apps" class="tab-btn py-2 px-3 rounded-xl text-slate-600 hover:bg-slate-50 transition flex items-center space-x-1">
+          <span>📲</span> <span>Le Tue App</span>
+        </button>
+        <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn py-2 px-3 rounded-xl text-purple-700 bg-purple-50/50 hover:bg-purple-100 transition flex items-center space-x-1">
+          <span>🎓</span> <span>Quiz</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Content Sections (INDIPENDENTI) -->
+    <main class="p-4 space-y-4">
+
+      <!-- TAB 1: AVVIO E CHECKLIST -->
+      <section id="content-step1" class="step-panel space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-minimed-navy bg-indigo-50 px-2.5 py-0.5 rounded-full">
+              Tappa 1 di 4 • Checklist
+            </span>
+            <span class="text-[11px] text-slate-400">Tempo: 2 min</span>
+          </div>
+          <h2 class="text-base font-extrabold text-slate-900">Prima di iniziare: 3 cose essenziali</h2>
+          <p class="text-xs text-slate-500">
+            Assicurati di avere pronti questi tre elementi per un avvio senza intoppi:
+          </p>
+
+          <div class="space-y-2 pt-1">
+            <label class="flex items-start space-x-3 p-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-slate-100/70 cursor-pointer transition">
+              <input type="checkbox" checked class="mt-1 w-4 h-4 text-indigo-600 rounded">
+              <div class="text-xs">
+                <span class="font-bold text-slate-800">1. Batteria AA nuova inserita</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">Usa una batteria alcalina o al litio nuova di marca.</p>
+              </div>
+            </label>
+            <label class="flex items-start space-x-3 p-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-slate-100/70 cursor-pointer transition">
+              <input type="checkbox" checked class="mt-1 w-4 h-4 text-indigo-600 rounded">
+              <div class="text-xs">
+                <span class="font-bold text-slate-800">2. Insulina a temperatura ambiente</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">Fuori dal frigo almeno 30 min prima per azzerare le bolle nel serbatoio.</p>
+              </div>
+            </label>
+            <label class="flex items-start space-x-3 p-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-slate-100/70 cursor-pointer transition">
+              <input type="checkbox" class="mt-1 w-4 h-4 text-indigo-600 rounded">
+              <div class="text-xs">
+                <span class="font-bold text-slate-800">3. Scarica le App sullo Smartphone</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">MiniMed Mobile, WeCare e Conta su di Me (trovi i link diretti nella scheda "Le Tue App").</p>
+              </div>
+            </label>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="switchTab('apps')" class="text-xs font-bold text-indigo-600 hover:underline">
+              📲 Vai prima alle App
+            </button>
+            <button onclick="switchTab('step2')" class="bg-minimed-navy text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm transition">
+              Tappa 2: Sensore Instinct™ →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: SENSORE INSTINCT -->
+      <section id="content-step2" class="step-panel hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-cyan-700 bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-200">
+              Tappa 2 di 4 • Sensore Instinct™
+            </span>
+            <span class="text-[11px] text-slate-400">Video: 2 min</span>
+          </div>
+          <h2 class="text-base font-extrabold text-slate-900">Applicazione del Sensore Instinct™</h2>
+          <p class="text-xs text-slate-500">
+            Un solo gesto, senza puntura manuale e senza calibrazioni con il pungidito.
+          </p>
+
+          <!-- Mock Video Player -->
+          <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 relative group aspect-video flex flex-col items-center justify-center text-center p-4 text-white shadow-inner">
+            <div class="w-14 h-14 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center font-bold text-xl shadow-lg transform group-hover:scale-105 transition cursor-pointer">
+              ▶
+            </div>
+            <p class="mt-2.5 font-bold text-xs text-white">Guida Applicazione Sensore Instinct™</p>
+            <p class="text-[10px] text-cyan-200">Posizionamento sul retro del braccio</p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 text-center text-[11px] pt-1">
+            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="font-bold text-slate-800 block mb-0.5">1. Braccio</span>
+              <span class="text-slate-500 text-[10px]">Pelle pulita e asciutta</span>
+            </div>
+            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="font-bold text-slate-800 block mb-0.5">2. Gesto</span>
+              <span class="text-slate-500 text-[10px]">Premi l'applicatore</span>
+            </div>
+            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="font-bold text-slate-800 block mb-0.5">3. Pronto</span>
+              <span class="text-slate-500 text-[10px]">Zero calibrazioni</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="switchTab('step1')" class="text-xs font-semibold text-slate-500">
+              ← Tappa 1
+            </button>
+            <button onclick="switchTab('step3')" class="bg-minimed-navy text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm transition">
+              Tappa 3: Set Extended™ →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: SET EXTENDED (6/7 GIORNI) -->
+      <section id="content-step3" class="step-panel hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
+              Tappa 3 di 4 • Set Medtronic Extended™
+            </span>
+            <span class="text-[10px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+              Cambio ogni 6 / 7 giorni
+            </span>
+          </div>
+          <h2 class="text-base font-extrabold text-slate-900">Set di Infusione Extended™ (Fino a 7 giorni)</h2>
+          <p class="text-xs text-slate-500">
+            Grazie alla tecnologia Extended™, cambi la cannula e il serbatoio solo una volta a settimana.
+          </p>
+
+          <!-- Mock Video Player Extended -->
+          <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 relative group aspect-video flex flex-col items-center justify-center text-center p-4 text-white shadow-inner">
+            <div class="w-14 h-14 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-xl shadow-lg transform group-hover:scale-105 transition cursor-pointer">
+              ▶
+            </div>
+            <p class="mt-2.5 font-bold text-xs text-white">Guida Cambio Serbatoio & Set Extended™</p>
+            <p class="text-[10px] text-purple-200">Eliminazione bolle d'aria e inserimento cannula</p>
+          </div>
+
+          <!-- Highlight Box Regola 6-7 Giorni -->
+          <div class="p-3 rounded-xl bg-purple-50/80 border border-purple-200 text-xs text-purple-950 space-y-1">
+            <p class="font-extrabold text-xs flex items-center text-purple-900">
+              💡 La Regola dei 6-7 Giorni
+            </p>
+            <p class="text-[11px] leading-relaxed text-purple-900">
+              I vecchi set duravano 2-3 giorni. Il <strong>set Extended™ è clinicamente validato per 7 giorni</strong>. Imposta il promemoria automatico sul 780G per ricordarti il giorno fisso della settimana.
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="switchTab('step2')" class="text-xs font-semibold text-slate-500">
+              ← Tappa 2
+            </button>
+            <button onclick="switchTab('step4')" class="bg-minimed-navy text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm transition">
+              Tappa 4: SmartGuard™ →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: SMARTGUARD -->
+      <section id="content-step4" class="step-panel hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+              Tappa 4 di 4 • SmartGuard™
+            </span>
+            <span class="text-[11px] text-slate-400">Algoritmo Attivo</span>
+          </div>
+          <h2 class="text-base font-extrabold text-slate-900">Come vivere sereni con SmartGuard™</h2>
+          <p class="text-xs text-slate-500">
+            L'algoritmo calcola e corregge l'insulina ogni 5 minuti. Meno pensieri per te.
+          </p>
+
+          <div class="space-y-2.5 pt-1">
+            <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs">
+              <span class="font-extrabold text-emerald-950 flex items-center">
+                ✅ Cosa devi fare tu:
+              </span>
+              <p class="mt-1 text-emerald-900 text-[11px] leading-relaxed">
+                <strong>Inserisci i carboidrati 10-15 minuti prima del pasto</strong>. Con l'app <em>Conta su di Me</em> stimare i grammi di pasta o pane è immediato.
+              </p>
+            </div>
+            <div class="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs">
+              <span class="font-extrabold text-rose-950 flex items-center">
+                🚫 Cosa NON devi fare:
+              </span>
+              <p class="mt-1 text-rose-900 text-[11px] leading-relaxed">
+                <strong>Non fare mai boli correttivi manuali</strong> con penne o siringhe: SmartGuard sa già se la glicemia sale e provvede da solo con micro-boli ogni 5 minuti.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="switchTab('step3')" class="text-xs font-semibold text-slate-500">
+              ← Tappa 3
+            </button>
+            <button onclick="switchTab('tips')" class="bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm transition">
+              Passa ai Tips & Tricks 💡 →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: TIPS & TRICKS (NOVITÀ: DOCCIA, CAMBIO SET, VIAGGI, SPORT) -->
+      <section id="content-tips" class="step-panel hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-4">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-300">
+              💡 Consigli Pratici di Vita Quotidiana
+            </span>
+            <h2 class="text-base font-extrabold text-slate-900 mt-2">Tips & Tricks: Risposte ai dubbi più comuni</h2>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Piccole furbizie pratiche per gestire doccia, viaggi, cambi set e sport senza stress.
+            </p>
+          </div>
+
+          <!-- TIP 1: DOCCIA E BAGNO -->
+          <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-2">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-9 h-9 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                🚿
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-xs sm:text-sm">Fare la doccia o il bagno</h3>
+                <p class="text-[11px] text-cyan-700 font-semibold">Come e quando sganciarsi</p>
+              </div>
+            </div>
+            <div class="text-xs text-slate-600 space-y-1 pl-1 text-[11px] leading-relaxed">
+              <p>• <strong>Come fare</strong>: premi le alette del connettore sul set Extended per sganciare il tubicino con un clic. La cannula rimane sulla pelle ed è impermeabile.</p>
+              <p>• <strong>Tempo massimo</strong>: puoi restare sganciato per un bagno o una doccia fino a un massimo di <strong>60 minuti</strong> senza interrompere l'equilibrio insulinico.</p>
+              <p>• <strong>Sensore Instinct™</strong>: è totalmente resistente all'acqua (puoi fare doccia, bagno o nuotare tranquillamente).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2: IL MOMENTO MIGLIORE PER IL CAMBIO SET -->
+          <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-2">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-9 h-9 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                ⏰
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-xs sm:text-sm">Il momento perfetto per cambiare il set</h3>
+                <p class="text-[11px] text-purple-700 font-semibold">La furbizia per dormire sereni</p>
+              </div>
+            </div>
+            <div class="text-xs text-slate-600 space-y-1 pl-1 text-[11px] leading-relaxed">
+              <p>• <strong>Consiglio d'oro</strong>: cambia il set Extended <strong>di mattina o prima di un pasto principale</strong>, MAI subito prima di andare a dormire.</p>
+              <p>• <strong>Perché?</strong>: così hai 2-3 ore di veglia per verificare con il pasto che la cannula sia posizionata perfettamente ed eroghi senza intoppi.</p>
+              <p>• <strong>Scegli il tuo giorno fisso</strong>: ad esempio ogni domenica mattina, così diventa una routine automatica.</p>
+            </div>
+          </div>
+
+          <!-- TIP 3: IN VIAGGIO E IN AEREO -->
+          <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-2">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                ✈️
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-xs sm:text-sm">In Viaggio: Controlli di sicurezza e valigia</h3>
+                <p class="text-[11px] text-blue-700 font-semibold">Raggi X, bagaglio a mano e certificati</p>
+              </div>
+            </div>
+            <div class="text-xs text-slate-600 space-y-1 pl-1 text-[11px] leading-relaxed">
+              <p>• <strong>Controlli Aeroporto</strong>: microinfusore e sensori <strong>NON devono passare nello scanner a raggi X</strong> (quello per le valigie) né nel body scanner total-body. Mostra il tesserino Medtronic e chiedi il controllo manuale (metal detector standard a portale o perquisizione a mano).</p>
+              <p>• <strong>Tutto nel Bagaglio a Mano</strong>: porta sempre scorte doppie di insulina, set Extended e sensori nel bagaglio a mano. <strong>Mai nella stiva</strong> (le temperature sotto zero dell'aereo congelano e distruggono l'insulina!).</p>
+              <p>• <strong>Materiale Guida Viaggi</strong>: puoi scaricare la lettera per l'aeroporto e la guida completa direttamente dall'app WeCare.</p>
+            </div>
+          </div>
+
+          <!-- TIP 4: SPORT E ATTIVITÀ FISICA -->
+          <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-2">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                🏃
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-xs sm:text-sm">Sport e Obiettivo Temporaneo SmartGuard</h3>
+                <p class="text-[11px] text-emerald-700 font-semibold">Prevenire le ipoglicemie da sforzo</p>
+              </div>
+            </div>
+            <div class="text-xs text-slate-600 space-y-1 pl-1 text-[11px] leading-relaxed">
+              <p>• Attiva l'<strong>Obiettivo Temporaneo (Temp Target a 150 mg/dL)</strong> su SmartGuard circa <strong>1-2 ore prima</strong> di iniziare l'attività sportiva.</p>
+              <p>• Questo dice all'algoritmo di ridurre l'insulina in anticipo, consentendoti di allenarti in piena sicurezza senza cali glicemici improvvisi.</p>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="switchTab('step4')" class="text-xs font-semibold text-slate-500">
+              ← Tappa 4
+            </button>
+            <button onclick="switchTab('apps')" class="bg-minimed-navy text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm transition">
+              Passa alle Tue App 📲 →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 6: LE TUE APP (MINIMED MOBILE, WECARE, CONTA SU DI ME) -->
+      <section id="content-apps" class="step-panel hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-4">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200">
+              Ecosistema Digitale Medtronic
+            </span>
+            <h2 class="text-base font-extrabold text-slate-900 mt-2">Le 3 App Consigliate sul tuo Telefono</h2>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Scarica queste tre app per avere il controllo completo, ordinare i materiali e contare i carboidrati facilmente.
+            </p>
+          </div>
+
+          <!-- APP 1: MiniMed Mobile -->
+          <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 rounded-2xl bg-minimed-navy text-white flex items-center justify-center font-black text-xl shadow-sm flex-shrink-0">
+                M
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-extrabold text-slate-900 text-sm truncate">MiniMed™ Mobile</h3>
+                  <span class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Essenziale</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">
+                  Visualizza la glicemia in tempo reale, trend e allarmi sul telefono e trasmette i dati a CareLink™.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <a href="https://apps.apple.com/it/app/minimed-mobile/id1453006286" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
+                <span></span> <span>App Store (iOS)</span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.medtronic.diabetes.minimedmobile" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-slate-900 text-white text-[11px] font-bold hover:bg-slate-800 transition">
+                <span>▶</span> <span>Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- APP 2: WeCare -->
+          <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 rounded-2xl bg-cyan-600 text-white flex items-center justify-center font-black text-xl shadow-sm flex-shrink-0">
+                W
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-extrabold text-slate-900 text-sm truncate">WeCare™ Medtronic</h3>
+                  <span class="text-[10px] font-bold bg-cyan-100 text-cyan-800 px-2 py-0.5 rounded-full">Materiali & Supporto</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">
+                  Gestisci il riordino dei tuoi sensori e set Extended, scarica la lettera per i viaggi aerei e contatta il team.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <a href="https://apps.apple.com/it/app/wecare-medtronic/id1534433777" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
+                <span></span> <span>App Store (iOS)</span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.medtronic.wecare" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-slate-900 text-white text-[11px] font-bold hover:bg-slate-800 transition">
+                <span>▶</span> <span>Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- APP 3: Conta su di Me -->
+          <div class="p-3.5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl shadow-sm flex-shrink-0">
+                🍎
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-extrabold text-slate-900 text-sm truncate">Conta su di Me</h3>
+                  <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">Carboidrati</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">
+                  Atlante fotografico dei cibi italiani per calcolare in un secondo i grammi di carboidrati da inserire nel 780G.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <a href="https://apps.apple.com/it/app/conta-su-di-me/id984461623" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-black text-white text-[11px] font-bold hover:bg-slate-800 transition">
+                <span></span> <span>App Store (iOS)</span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.medtronic.contasudime" target="_blank" class="flex items-center justify-center space-x-1.5 py-2 px-2.5 rounded-xl bg-slate-900 text-white text-[11px] font-bold hover:bg-slate-800 transition">
+                <span>▶</span> <span>Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="switchTab('tips')" class="text-xs font-semibold text-slate-500">
+              ← Tips & Tricks
+            </button>
+            <button onclick="switchTab('quiz')" class="bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm transition">
+              Fai il Mini-Quiz Finale 🎓 →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 7: QUIZ DEDICATO (TOTALMENTE SEPARATO!) -->
+      <section id="content-quiz" class="step-panel hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border-2 border-purple-200 shadow-md space-y-4">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
+                Scheda Autoverifica Lampo
+              </span>
+              <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-2">Pronti per la nuova terapia?</h2>
+              <p class="text-xs text-slate-500 mt-0.5">
+                3 domande veloci per confermare i passaggi chiave prima di iniziare.
+              </p>
+            </div>
+            <span class="text-2xl">🎓</span>
+          </div>
+
+          <form id="quizForm" class="space-y-3.5">
+            <!-- Domanda 1 -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <p class="font-bold text-xs text-slate-900">
+                1. Quando inserisci i carboidrati prima di mangiare?
+              </p>
+              <div class="space-y-1.5 text-xs">
+                <label class="flex items-center space-x-2 p-2 rounded-lg hover:bg-white cursor-pointer transition">
+                  <input type="radio" name="q1" value="correct" class="text-indigo-600">
+                  <span><strong>10-15 minuti prima</strong> di iniziare il pasto</span>
+                </label>
+                <label class="flex items-center space-x-2 p-2 rounded-lg hover:bg-white cursor-pointer transition">
+                  <input type="radio" name="q1" value="wrong" class="text-indigo-600">
+                  <span>1 ora dopo aver finito di mangiare</span>
+                </label>
+              </div>
+              <div id="q1-feedback" class="hidden text-xs font-semibold p-2 rounded-lg"></div>
+            </div>
+
+            <!-- Domanda 2 -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <p class="font-bold text-xs text-slate-900">
+                2. Ogni quanti giorni va sostituito il set Medtronic Extended™?
+              </p>
+              <div class="space-y-1.5 text-xs">
+                <label class="flex items-center space-x-2 p-2 rounded-lg hover:bg-white cursor-pointer transition">
+                  <input type="radio" name="q2" value="wrong" class="text-indigo-600">
+                  <span>Ogni 2 giorni come i set tradizionali</span>
+                </label>
+                <label class="flex items-center space-x-2 p-2 rounded-lg hover:bg-white cursor-pointer transition">
+                  <input type="radio" name="q2" value="correct" class="text-indigo-600">
+                  <span><strong>Ogni 6 o 7 giorni</strong> (1 volta a settimana)</span>
+                </label>
+              </div>
+              <div id="q2-feedback" class="hidden text-xs font-semibold p-2 rounded-lg"></div>
+            </div>
+
+            <!-- Domanda 3 -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <p class="font-bold text-xs text-slate-900">
+                3. Se la glicemia sale post-pasto e SmartGuard™ è attivo:
+              </p>
+              <div class="space-y-1.5 text-xs">
+                <label class="flex items-center space-x-2 p-2 rounded-lg hover:bg-white cursor-pointer transition">
+                  <input type="radio" name="q3" value="correct" class="text-indigo-600">
+                  <span><strong>Attendo e monitoro</strong>: SmartGuard eroga micro-correzioni ogni 5 min</span>
+                </label>
+                <label class="flex items-center space-x-2 p-2 rounded-lg hover:bg-white cursor-pointer transition">
+                  <input type="radio" name="q3" value="wrong" class="text-indigo-600">
+                  <span>Faccio subito un bolo con una penna manuale</span>
+                </label>
+              </div>
+              <div id="q3-feedback" class="hidden text-xs font-semibold p-2 rounded-lg"></div>
+            </div>
+
+            <button type="button" onclick="verifyQuiz()" class="w-full bg-purple-700 hover:bg-purple-800 text-white font-extrabold text-xs sm:text-sm py-3 rounded-xl transition shadow-md flex items-center justify-center space-x-2">
+              <span>Verifica Risposte</span> <span>✨</span>
+            </button>
+          </form>
+
+          <!-- Success Card -->
+          <div id="quizSuccess" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-center space-y-2">
+            <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto text-lg font-bold shadow-sm">
+              ✓
+            </div>
+            <h3 class="font-extrabold text-emerald-950 text-sm">Tutto esatto! Sei pronto per la terapia</h3>
+            <p class="text-emerald-800 text-xs">
+              Hai completato la panoramica iniziale su <strong>MiniMed™ 780G</strong>, sensore <strong>Instinct™</strong> e set <strong>Extended™</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEZIONE ACCORDION "COSA FARE SE..." (COMPATTA IN BASSO) -->
+      <section class="space-y-2 pt-2">
+        <h3 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider text-slate-500 px-1">
+          Pillole Rapide di Supporto
+        </h3>
+
+        <!-- Allarmi -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
+          <button onclick="toggleAccordion('acc1')" class="w-full p-3.5 text-left flex items-center justify-between font-bold text-xs text-slate-800 hover:bg-slate-50 transition">
+            <span class="flex items-center">
+              <span class="mr-2 text-sm">🔔</span> Suona un allarme: cosa controllo?
+            </span>
+            <span id="acc1-icon" class="text-slate-400 text-[10px]">▼</span>
+          </button>
+          <div id="acc1" class="hidden px-3.5 pb-3 pt-0 text-xs text-slate-600 border-t border-slate-100 bg-slate-50/50 space-y-1.5">
+            <p>1. <strong>Leggi il display</strong>: il 780G indica la causa (es. serbatoio quasi vuoto).</p>
+            <p>2. Premi il tasto centrale per silenziare e segui le istruzioni a schermo.</p>
+          </div>
+        </div>
+
+        <!-- Numero Verde -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
+          <button onclick="toggleAccordion('acc2')" class="w-full p-3.5 text-left flex items-center justify-between font-bold text-xs text-slate-800 hover:bg-slate-50 transition">
+            <span class="flex items-center">
+              <span class="mr-2 text-sm">📞</span> Numero Verde Medtronic MiniMed H24
+            </span>
+            <span id="acc2-icon" class="text-slate-400 text-[10px]">▼</span>
+          </button>
+          <div id="acc2" class="hidden px-3.5 pb-3 pt-0 text-xs text-slate-600 border-t border-slate-100 bg-slate-50/50 space-y-2">
+            <p>Supporto tecnico telefonico gratuito attivo 24 ore su 24, 7 giorni su 7:</p>
+            <a href="tel:800601122" class="inline-flex items-center space-x-1.5 bg-emerald-600 text-white px-3 py-1.5 rounded-lg font-bold text-xs">
+              <span>📞 Chiama 800.601.122</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-6 py-4 px-4 text-center text-[10px] text-slate-400 border-t border-slate-200 space-y-1">
+      <p class="font-bold text-slate-600">MiniMed™ 780G • Medtronic Diabetes</p>
+      <p>Numero Verde Assistenza Tecnica H24: 800.601.122</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Tab Switcher
+    function switchTab(stepId) {
+      document.querySelectorAll('.step-panel').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-indigo-50', 'text-minimed-navy', 'border', 'border-indigo-200/80', 'bg-purple-100', 'text-purple-900', 'bg-amber-100', 'text-amber-900', 'border-amber-300');
+        btn.classList.add('text-slate-600');
+      });
+
+      const activePanel = document.getElementById('content-' + stepId);
+      const activeTab = document.getElementById('tab-' + stepId);
+      if (activePanel) activePanel.classList.remove('hidden');
+      if (activeTab) {
+        if (stepId === 'quiz') {
+          activeTab.classList.add('bg-purple-100', 'text-purple-900', 'border', 'border-purple-300');
+        } else if (stepId === 'tips') {
+          activeTab.classList.add('bg-amber-100', 'text-amber-900', 'border', 'border-amber-300');
+        } else {
+          activeTab.classList.add('bg-indigo-50', 'text-minimed-navy', 'border', 'border-indigo-200/80');
+        }
+        activeTab.classList.remove('text-slate-600');
+      }
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Quiz Verification
+    function verifyQuiz() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      const q3 = document.querySelector('input[name="q3"]:checked');
+
+      const fb1 = document.getElementById('q1-feedback');
+      const fb2 = document.getElementById('q2-feedback');
+      const fb3 = document.getElementById('q3-feedback');
+      const successCard = document.getElementById('quizSuccess');
+
+      let allCorrect = true;
+
+      // Q1
+      if (!q1) {
+        fb1.className = "text-[11px] font-semibold p-2 rounded-lg bg-amber-50 text-amber-800";
+        fb1.innerText = "⚠️ Seleziona una risposta.";
+        fb1.classList.remove('hidden');
+        allCorrect = false;
+      } else if (q1.value === 'correct') {
+        fb1.className = "text-[11px] font-semibold p-2 rounded-lg bg-emerald-50 text-emerald-800";
+        fb1.innerText = "✓ Esatto! 10-15 minuti prima dà tempo all'insulina di agire.";
+        fb1.classList.remove('hidden');
+      } else {
+        fb1.className = "text-[11px] font-semibold p-2 rounded-lg bg-rose-50 text-rose-800";
+        fb1.innerText = "✗ Inserire i carboidrati dopo il pasto provoca picchi glicemici.";
+        fb1.classList.remove('hidden');
+        allCorrect = false;
+      }
+
+      // Q2
+      if (!q2) {
+        fb2.className = "text-[11px] font-semibold p-2 rounded-lg bg-amber-50 text-amber-800";
+        fb2.innerText = "⚠️ Seleziona una risposta.";
+        fb2.classList.remove('hidden');
+        allCorrect = false;
+      } else if (q2.value === 'correct') {
+        fb2.className = "text-[11px] font-semibold p-2 rounded-lg bg-emerald-50 text-emerald-800";
+        fb2.innerText = "✓ Esatto! Il set Extended™ dura fino a 6 o 7 giorni.";
+        fb2.classList.remove('hidden');
+      } else {
+        fb2.className = "text-[11px] font-semibold p-2 rounded-lg bg-rose-50 text-rose-800";
+        fb2.innerText = "✗ Il set Extended™ dura fino a 6 o 7 giorni (1 sola volta a settimana).";
+        fb2.classList.remove('hidden');
+        allCorrect = false;
+      }
+
+      // Q3
+      if (!q3) {
+        fb3.className = "text-[11px] font-semibold p-2 rounded-lg bg-amber-50 text-amber-800";
+        fb3.innerText = "⚠️ Seleziona una risposta.";
+        fb3.classList.remove('hidden');
+        allCorrect = false;
+      } else if (q3.value === 'correct') {
+        fb3.className = "text-[11px] font-semibold p-2 rounded-lg bg-emerald-50 text-emerald-800";
+        fb3.innerText = "✓ Esatto! SmartGuard™ si occupa autonomamente delle correzioni ogni 5 minuti.";
+        fb3.classList.remove('hidden');
+      } else {
+        fb3.className = "text-[11px] font-semibold p-2 rounded-lg bg-rose-50 text-rose-800";
+        fb3.innerText = "✗ Mai fare punture manuali concorrenti con siringhe: rischi un accumulo di insulina.";
+        fb3.classList.remove('hidden');
+        allCorrect = false;
+      }
+
+      if (allCorrect) {
+        successCard.classList.remove('hidden');
+        successCard.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
